@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.eliteaiempire/clipwright",
+  "title": "Clipwright",
+  "description": "Check a clip job or see how much of your monthly allowance you have used.",
+  "version": "1.1.0",
+  "websiteUrl": "https://auth.eliteaiempire.com/mcp-docs/clipwright",
+  "repository": {
+    "url": "https://github.com/iskra-astudillo/clipwright-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://auth.eliteaiempire.com/mcp/clipwright",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "MCP read key from the connection guide.",
+          "value": "Bearer {read_key}",
+          "isRequired": true,
+          "variables": {
+            "read_key": {
+              "description": "Your MCP read key",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
